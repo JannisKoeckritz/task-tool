@@ -22,3 +22,6 @@ class Board(models.Model):
 class Task(models.Model):
     status = models.CharField(max_length=100)
     points = models.PositiveSmallIntegerField()
+
+    def __str__(self):
+        return f"{self.status} - {self.points}"
